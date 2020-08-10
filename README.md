@@ -1,2 +1,2 @@
 # Simple Noise Generator
- Simple perlin noise generator
+ Simple noise generator

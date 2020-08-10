@@ -1,0 +1,41 @@
+body
+{
+    font-family: "Lucida Console", Monaco, monospace; 
+}
+
+input
+{
+    font-family: "Lucida Console", Monaco, monospace; 
+}
+
+input[type="number"]
+{
+    width: 5em;
+}
+
+#scaleInput
+{
+    margin-top: .5em;
+    width: 3em;
+}
+
+input[type="checkbox"]
+{
+    margin-left: -0.1em;
+}
+
+#buttonBox
+{
+    margin-top: .5em;
+    margin-bottom: 1em;
+}
+
+#saveButton
+{
+    display: none;
+}
+
+#newCanvas
+{
+    display: none;
+}

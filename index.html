@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta name="author" content="Michał Myszor" />
+        <meta name="description" content="Simple noise generator" />
+
+        <link rel="stylesheet" href="style.css" />
+
+        <title>Noise Generator</title>
+    </head>
+    <body>
+        <div id="settingsBox">
+            <b>Resolution</b><br />
+            X<input type="number" id="resX" value=1024 />
+            Y<input type="number" id="resY" value=1024 /><br />
+
+            Scale<input type="number" id="scaleInput" value=500 /><br />
+
+            <input type="checkbox" id="rCheckbox" checked />R<br />
+            <input type="checkbox" id="gCheckbox" checked />G<br />
+            <input type="checkbox" id="bCheckbox" checked />B<br />
+        </div>
+
+        <div id="buttonBox">
+            <input type="button" onclick="GenerateNoise()" value="Generate" />
+            <input id="saveButton" type="button" onclick="Save()" value="Save" />
+        </div>
+
+        <canvas id="canvas" width=1024 height=1024></canvas>
+        <canvas id="newCanvas" width=1024 height=1024></canvas>
+
+        <script src="script.js"></script>
+    </body>
+</html>

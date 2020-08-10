@@ -46,7 +46,7 @@ function GenerateNoise()
         for(var j=1; j<=layers.value; j++)
         {
             //Get image data
-            imgData = ctx.getImageData(0, 0, scale.value / j, scale.value / j);
+            imgData = ctx.getImageData(0, 0, scale.value / j, scale.value / j); //Scaled by layercount
 
             //Generate Noise
             for(var i=0; i<imgData.data.length; i+=4)
@@ -61,10 +61,10 @@ function GenerateNoise()
                 //B
                 imgData.data[i+2] = Math.floor(Math.random() * (255 + 1));
 
-                //A
+                //A Scaled with every layer
                 imgData.data[i+3] = Math.floor(255/layers.value);
 
-                //Grayscale
+                //Combined grayscale
                 grayScale = ((0.299 * imgData.data[i]) + (0.587 * imgData.data[i+1]) + (0.114 * imgData.data[i+2]));
 
                 //R grayscale
@@ -110,12 +110,16 @@ function GenerateNoise()
 //Save and download
 function Save()
 {
+    //Set date for naming file
     date = new Date();
     date.setMonth(date.getMonth() + 1);
 
-	let downloadLink = document.createElement('a');
+    let downloadLink = document.createElement('a');
+
+    //Name file
 	downloadLink.setAttribute('download', 'Noise_' + date.getDate() + '-' + date.getMonth() + '-' + date.getFullYear() + '_' + date.getHours() + '-' + date.getMinutes() + '.png');
     
+    //Canvas to url and to download link
     canvas.toBlob(function(blob) 
     {
 	    let url = URL.createObjectURL(blob);

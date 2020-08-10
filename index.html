@@ -13,11 +13,15 @@
     </head>
     <body>
         <div id="settingsBox">
-            <b>Resolution</b><br />
-            X<input type="number" id="resX" value=1024 />
-            Y<input type="number" id="resY" value=1024 /><br />
+            Resolution 
+            X<input type="number" id="resX" value=1024 step="1" min="1" />
+            Y<input type="number" id="resY" value=1024 step="1" min="1" /><br />
 
-            Scale<input type="number" id="scaleInput" value=500 /><br />
+            Scale <input type="number" id="scaleInput" value=500 step="1" /><br />
+
+            Background Color <input type="color" id="bckColor" value="#808080" /><br />
+
+            Layers <input type="number" id="layersInput" value=1 min="1" step="1" /><br />
 
             <input type="checkbox" id="rCheckbox" checked />R<br />
             <input type="checkbox" id="gCheckbox" checked />G<br />

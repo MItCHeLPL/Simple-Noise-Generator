@@ -62,7 +62,7 @@ function GenerateNoise()
                 imgData.data[i+2] = Math.floor(Math.random() * (255 + 1));
 
                 //A Scaled with every layer
-                imgData.data[i+3] = Math.floor(255/layers.value);
+                imgData.data[i+3] = Math.floor(255/layers.value); 
 
                 //Combined grayscale
                 grayScale = ((0.299 * imgData.data[i]) + (0.587 * imgData.data[i+1]) + (0.114 * imgData.data[i+2]));

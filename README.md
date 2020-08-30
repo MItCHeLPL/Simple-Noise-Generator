@@ -1,6 +1,6 @@
 # Simple Noise Generator
 
-Generate Perlin or simple noise with rgb option and convert it into an PNG image.
+### Generate Perlin or simple noise with rgb option and convert it into an PNG image.
 
 ## Try it out
 https://mitchelpl.github.io/Simple-Noise-Generator/
